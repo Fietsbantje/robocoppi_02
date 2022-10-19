@@ -21,11 +21,11 @@ for intent in intents['intents']:
     # add to tag list
     tags.append(tag)
     for pattern in intent['patterns']:
-        # tokenize each word in the sentence
+        # tokenize each word in the sentence TODO change variable name 'w' into a more explanatory name for 'tokenized word' or is it 'tokenized pattern'?
         w = tokenize(pattern)
         # add to our words list
         all_words.extend(w)
-        # add to xy pair
+        # add to xy pair (the tokenized pattern 'w' and the corresponding tag 'tag')
         xy.append((w, tag))
 
 # stem and lower each word
@@ -40,6 +40,8 @@ print(len(tags), "tags:", tags)
 print(len(all_words), "unique stemmed words:", all_words)
 
 # create training data
+# x_train contains all the bags of words (of the patterns)
+# y-train contains all the tags
 X_train = []
 y_train = []
 for (pattern_sentence, tag) in xy:
