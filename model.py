@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-# input_size is fixed (the number of patterns) and the num_classes (number of tags), but the hidden_size can be changed
+# input_size (the number of patterns) and the num_classes (number of tags) are fixed, but the hidden_size can be changed
 class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size, num_classes):
         super(NeuralNet, self).__init__()

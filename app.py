@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request, jsonify
-
+from flask_cors import CORS #delete this line if not using the standalone front end option
 from chat import get_response
 
 app = Flask(__name__)
+CORS(app) # delete this line if not using the standalone front end option
 
 # define two routes. One route to return the base html and one route to do the prediction.
-@app.get("/")
-def index_get():
-    return render_template("base.html")
-
+# use this line when nout using the standalone front end option: @app.get("/")
+# use this line when nout using the standalone front end option: def index_get():
+# use this line when nout using the standalone front end option:   return render_template("base.html")
 
 @app.post("/predict")
 def predict():
@@ -19,5 +19,5 @@ def predict():
     return jsonify(message)
 
 
-    if __name__ == "__main__":
-        app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)

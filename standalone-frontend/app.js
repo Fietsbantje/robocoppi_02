@@ -5,7 +5,7 @@ class Chatbox {
             chatBox: document.querySelector('.chatbox__support'),
             sendButton: document.querySelector('.send__button')
         }
-
+        // The chatbox is closed to begin with, therefore:
         this.state = false;
         this.messages = [];
     }
@@ -45,7 +45,9 @@ class Chatbox {
 
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
-
+        // Send a post request to this end point. TODO: replace with the url of my website?
+        // Here it is hard coded to the local host 5000
+        // In the static app.js replace the following line with: fetch($SCRIPT-ROOT + '/predict', {
         fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
@@ -56,7 +58,7 @@ class Chatbox {
           })
           .then(r => r.json())
           .then(r => {
-            let msg2 = { name: "Sam", message: r.answer };
+            let msg2 = { name: "Robocoppi", message: r.answer };
             this.messages.push(msg2);
             this.updateChatText(chatbox)
             textField.value = ''
@@ -71,7 +73,7 @@ class Chatbox {
     updateChatText(chatbox) {
         var html = '';
         this.messages.slice().reverse().forEach(function(item, index) {
-            if (item.name === "Sam")
+            if (item.name === "Robocoppi")
             {
                 html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
             }
