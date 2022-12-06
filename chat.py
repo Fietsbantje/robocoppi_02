@@ -42,18 +42,18 @@ def get_response(msg):
     prob = probs[0][predicted.item()]
     if prob.item() > 0.75:
         for intent in intents['intents']:
-            if tag == intent["tag"]:
+            if tag == intent["intent_name_tag"]:
                 return random.choice(intent['responses'])
     
     return "I do not understand..."
 
 
 if __name__ == "__main__":
-    print("Let's chat! (type 'quit' to exit)")
+    print("Talk to me whenever you feel like it! (type 'basta' to quit)")
     while True:
         # sentence = "do you use credit cards?"
         sentence = input("You: ")
-        if sentence == "quit":
+        if sentence == "basta":
             break
 
         resp = get_response(sentence)
