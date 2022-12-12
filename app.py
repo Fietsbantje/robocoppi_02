@@ -6,9 +6,9 @@ app = Flask(__name__)
 CORS(app) # delete this line if not using the standalone front end option
 
 # define two routes. One route to return the base html and one route to do the prediction.
-# use this line when nout using the standalone front end option: @app.get("/")
-# use this line when nout using the standalone front end option: def index_get():
-# use this line when nout using the standalone front end option:   return render_template("base.html")
+# use this line when not using the standalone front end option: @app.get("/")
+# use this line when not using the standalone front end option: def index_get():
+# use this line when not using the standalone front end option: return render_template("base.html")
 
 @app.post("/predict")
 def predict():
