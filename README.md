@@ -6,7 +6,7 @@ For building the front end of RoboCoppi I followed this tutorial on building a c
 
 https://github.com/python-engineer/pytorch-chatbot   
 
-I did the tutorial "Introduction to Web Design and Development" by Jen Kramer on [LinkedinLearning](https://www.linkedin.com/learning/, a clear course for beginners. LinkedinLearning isn't free, but some employers provide free access to these courses.  
+I did the tutorial "Introduction to Web Design and Development" by Jen Kramer on [Linkedin Learning](https://www.linkedin.com/learning/), a clear course for beginners. Linkedin Learning isn't free, but some employers provide free access to these courses.  
 
 I used [codepen](https://codepen.io) to better understand the HTML, CSS and JavaScript modules and to customize RoboCoppi's graphical interface.
 
@@ -74,8 +74,8 @@ For learning how to implement app.py and app.js watch the original tutorial in t
 ## Credits:  
 
 These repo's were used to build this version:  
-https://github.com/hitchcliff/front-end-chatjs
-https://github.com/python-engineer/pytorch-chatbot 
+https://github.com/hitchcliff/front-end-chatjs  
+https://github.com/python-engineer/pytorch-chatbot  
 https://github.com/python-engineer/chatbot-deployment  
   
 
